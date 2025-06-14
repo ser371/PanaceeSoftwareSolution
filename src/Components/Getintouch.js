@@ -22,33 +22,49 @@ function Getintouch() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, like sending data to a server
-    console.log(formData);
-    // Reset form fields after submission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-      country: "",
-      message: "",
-    });
 
-    emailjs
-      .send("service_6j9s08f", "template_6wtjmgj", formData, "vXdY1WfdvQ9-YJWwN")
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send the message, please try again.");
+    const { firstName, lastName, email, message } = formData;
+    const name = `${firstName} ${lastName}`.trim();
+    const subject = `Message from ${name}`;
+    const formattedBody = `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`;
+
+    try {
+      const response = await fetch(
+        "https://crmapi.trektrail.in/api/Email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            toEmail: "info@panaceesoftwaresolutions.com",
+            subject: subject,
+            body: formattedBody,
+          }),
         }
       );
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      alert("Your message was sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        country: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+      console.error("Error:", error);
+    }
   };
+
   return (
     <>
       <Narrow>

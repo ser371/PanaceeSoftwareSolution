@@ -28,37 +28,36 @@ body {
   align-items: center;
 }
 
-.dropPort1{
+.dropPort1 {
   position: absolute;
-  top:100%;
-  left:0px;
+  top: 100%;
+  left: 0px;
   display: none;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  box-shadow: 10px 0px 10px  rgba(0,0,0,0.3);
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.Port:hover .dropPort1{
+.Port:hover .dropPort1 {
   display: flex;
-  width:100vw;
+  width: 100vw;
 }
-.dropServ1{
+.dropServ1 {
   position: absolute;
-  top:100%;
-  left:0px;
+  top: 100%;
+  left: 0px;
   display: none;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  box-shadow: 10px 0px 10px  rgba(0,0,0,0.3);
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.Serv:hover .dropServ1{
+.Serv:hover .dropServ1 {
   display: flex;
-  width:100vw;
+  width: 100vw;
 }
-
 
 p {
   font-family: DM Sans;
@@ -67,7 +66,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-
   html,
   body {
     overflow-x: hidden;
@@ -115,12 +113,9 @@ p {
   /* padding-left: 30px; */
   /* margin-top: 55px; */
 }
-
 .navlogo {
-  /* width: 3vw;
-    height: 6vh; */
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 100%;
   margin-left: 10vw;
 }
 
@@ -250,16 +245,15 @@ p {
   transform: scale(0.8);
 }
 
-.map{
+.map {
   border: 0px solid black;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
   border-radius: 15px;
 }
 
-.darkbg{
+.darkbg {
   background: #1c1c1c;
 }
-
 
 .contypecard a {
   /* background-color: #000000; */
@@ -295,7 +289,8 @@ Button {
   }
 }
 
-@media scr {}
+@media scr {
+}
 
 .contactusbtnfoot {
   border-radius: 80px;
@@ -424,31 +419,31 @@ Button {
   top: 0;
   background-color: white;
   z-index: 10;
-  height:10vh;
-  max-height:120px;
+  height: 10vh;
+  max-height: 120px;
   z-index: 10;
 }
-.callsvg{
+.callsvg {
   transform: rotate(-45deg);
   position: relative;
-  top:2px;
+  top: 2px;
 }
 
-.contentNavbar>span {
+.contentNavbar > span {
   width: 110px;
 }
 .contentNavbar .small {
   width: 90px;
 }
 
-@media screen and (max-width:950px){
-  .contentNavbar>span{
-    width:75px;
+@media screen and (max-width: 950px) {
+  .contentNavbar > span {
+    width: 75px;
   }
   .contentNavbar .small {
-    width:60px;
+    width: 60px;
   }
-  .contentNavbar>Span{
+  .contentNavbar > Span {
     font-size: small;
   }
 }
@@ -463,30 +458,27 @@ Button {
   z-index: 10;
   position: fixed; /* Add position relative to make animation work */
   transform: translateX(-100%); /* Initial state off-screen */
-  
 }
 
 .dropdownMenu.open {
   animation: slidein 0.5s forwards; /* Change animation on open */
-  
 }
-.dropdownMenu .close{
+.dropdownMenu .close {
   animation: slidein 0.5s forwards;
 }
-.dropPort{
+.dropPort {
   position: relative;
   height: auto;
   overflow: hidden;
-  animation: heightinc 0.6s ease ;
+  animation: heightinc 0.6s ease;
 }
 @keyframes heightinc {
   from {
-    height:10px;
+    height: 10px;
   }
-  to{
+  to {
     height: 1000px;
   }
-  
 }
 
 @keyframes slidein {
@@ -634,7 +626,7 @@ Button {
   line-height: 82px;
 }
 
-.header{
+.header {
   opacity: 0;
   transform: scale(0.5);
 }
@@ -647,7 +639,6 @@ li {
   list-style: none;
   margin-top: 8px;
 }
-
 
 .navserviceimg {
   width: 250px;
@@ -778,7 +769,7 @@ li {
 }
 
 .card1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 100%;
@@ -792,7 +783,7 @@ li {
 }
 
 .card3::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 105%; /* Adjust the position */
   left: 120%; /* Adjust the position */
@@ -810,7 +801,7 @@ li {
 .card4 {
   position: relative;
 }
-.card4::after{
+.card4::after {
   position: absolute;
   content: url(../src/Images/final_l_shape.png);
   left: -10%;
@@ -823,7 +814,7 @@ li {
   position: relative;
 }
 
-.card5::after{
+.card5::after {
   position: absolute;
   content: url(../src/Images/final_l_shape.png);
   left: 50%;
@@ -835,7 +826,7 @@ li {
 }
 
 .card6::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   right: 100%;
@@ -845,7 +836,11 @@ li {
 }
 
 @media screen and (max-width: 765px) {
-  .card5::after, .card1::before , .card3::before, .card6::before, .card4::after{
+  .card5::after,
+  .card1::before,
+  .card3::before,
+  .card6::before,
+  .card4::after {
     display: none;
   }
 }
@@ -1081,11 +1076,11 @@ li {
   /* height: 90vh !important; */
 }
 
-
 .fade-in {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media screen and (max-width: 1600px) {
@@ -1164,30 +1159,31 @@ li {
 }
 
 .sliderimage::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0; /* Position the border at the left edge */
   top: 50%; /* Start the border in the middle vertically */
-  transform: translateY(-50%); /* Adjust position to center the pseudo-element */
+  transform: translateY(
+    -50%
+  ); /* Adjust position to center the pseudo-element */
   height: 35%;
   width: 1px;
   background-color: rgb(190, 190, 190);
 }
 
-.swiperbg{
+.swiperbg {
   border: 1px solid #f3f2f2;
   box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.03);
   border-radius: 15px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
-.swiperbg:hover{
-  cursor:grab;
+.swiperbg:hover {
+  cursor: grab;
 }
 .swiperbg:active {
   cursor: grabbing;
 }
-
 
 .home-slider-img {
   height: 60%;
@@ -1467,7 +1463,6 @@ a {
   color: #1351d8;
 }
 
-
 .tasksign {
   display: flex;
   flex-flow: row;
@@ -1610,7 +1605,7 @@ a {
 }
 
 .ourexpert {
-  background-color: #F3F6FD;
+  background-color: #f3f6fd;
   padding: 50px;
   border-radius: 15px;
   display: flex;
@@ -1626,7 +1621,7 @@ a {
   margin-top: 40px;
   justify-content: center;
   align-items: center;
-  background-color: #F3F6FD;
+  background-color: #f3f6fd;
   border-radius: 15px;
 }
 
@@ -1736,16 +1731,16 @@ a {
   align-items: center;
 }
 
-.jeevshaktibg{
+.jeevshaktibg {
   background-image: url(./Images/jeevshakti.png);
 }
-.jeevshaktibg:hover{
+.jeevshaktibg:hover {
   background-image: url(./Images/jeevshakti2.jpg);
 }
-.medecombg{
+.medecombg {
   background-image: url(./Images/Medecom.png);
 }
-.medecombg:hover{
+.medecombg:hover {
   background-image: url(./Images/Medecom2.jpg);
 }
 
@@ -1759,38 +1754,33 @@ a {
   margin-top: 35px;
 }
 
-
-.macicons{
+.macicons {
   margin: 1rem 0.75rem;
 }
 
-@media screen and (max-width:"1280px"){
-  .macicons{
+@media screen and (max-width: "1280px") {
+  .macicons {
     margin: 1rem 0.2rem;
   }
 }
 
-
-.stickycard1{
+.stickycard1 {
   position: sticky;
-  top:10%;
+  top: 10%;
   z-index: 1;
 }
 
-
-.stickycard2{
+.stickycard2 {
   position: sticky;
-  top:10%;
+  top: 10%;
   z-index: 2;
 }
 
-.stickycard3{
+.stickycard3 {
   position: sticky;
-  top:10%;
+  top: 10%;
   z-index: 3;
 }
-
-
 
 @tailwind base;
 @tailwind components;
