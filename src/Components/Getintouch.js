@@ -77,7 +77,7 @@ function Getintouch() {
                 You can reach us anytime via
                 <a style={{ color: "blue" }} href="/">
                   {" "}
-                  infopanacee@gmail.com
+                  info@panaceesoftwaresolutions.com
                 </a>
               </h5>
               <div className=" mt-5">
@@ -280,7 +280,9 @@ function Getintouch() {
                     </Row>
                     <h4>Contact info</h4>
                     <p style={{ marginBottom: "4px" }}>96509 00190</p>
-                    <p style={{ margin: "0px" }}>infopanacee@gmail.com</p>
+                    <p style={{ margin: "0px" }}>
+                      info@panaceesoftwaresolutions.com
+                    </p>
                     <br />
                     <Row style={{ marginTop: "30px" }}>
                       {" "}

@@ -1,12 +1,12 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Row, Col, Button, Container } from "reactstrap";
 import { Link } from "react-router-dom";
 import Narrow from "./Common/Narrow";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
+import youtube from "../Images/YoutubeLogo.jpg";
 
 function Footer() {
-
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -24,18 +24,26 @@ function Footer() {
       user_email: email,
     };
 
-    emailjs.send('service_tp0xe6o', 'template_mpmyhub', templateParams, 'ZUPy5599PTvnFBYus')
-      .then((result) => {
-        console.log(result.text);
-        alert('Email sent successfully!');
-      }, (error) => {
-        console.log(error.text);
-        alert('Failed to send the email, please try again.');
-      });
+    emailjs
+      .send(
+        "service_tp0xe6o",
+        "template_mpmyhub",
+        templateParams,
+        "ZUPy5599PTvnFBYus"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Email sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send the email, please try again.");
+        }
+      );
 
     setEmail("");
   };
-
 
   return (
     <>
@@ -166,9 +174,7 @@ function Footer() {
                 </div>
 
                 <div className="max-lg:mb-10 max-md:p-5">
-                  <h5 className="text-xl font-semibold ">
-                    Company
-                  </h5>
+                  <h5 className="text-xl font-semibold ">Company</h5>
                   <a href="/blogs">
                     <li>Blog</li>
                   </a>
@@ -230,9 +236,7 @@ function Footer() {
                     <li>Document</li>
                   </a>
                 </div>
-
               </div>
-              
 
               <div className="max-md:p-5 ">
                 <p className="text-xl font-semibold">Phone</p>
@@ -243,52 +247,65 @@ function Footer() {
                 <br />
                 <p className="text-xl font-semibold">Email</p>
                 <a href="/contactUs">
-                  <p>infopanacee@gmail.com</p>
+                  <p>info@panaceesoftwaresolutions.com</p>
                 </a>
               </div>
             </div>
           </div>
           <div className="flex max-md:p-5 w-full max-md:flex-col justify-between mt-3">
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "28px" }}
+            <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <a href="https://facebook.com" target="_blank">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-round-color-icon.png"
-                    alt=""
-                    className="connection-logo w-10"
-                  />
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/ig-instagram-icon.png"
-                    alt=""
-                    className="connection-logo w-10"
-                  />
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/company/panacee-software-solutions/">
-                  <img
-                    src="https://ik.imagekit.io/2q7cgnqzi/icon/icons8-linkedin.svg?updatedAt=1710492054727"
-                    alt=""
-                    className="connection-logo-linkedin w-10"
-                  />
-                </a>
-                <a href="https://youtube.com" target="_blank">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-icon.png"
-                    alt=""
-                    className="connection-logo w-10"
-                  />
-                </a>
-              </div>
-              <div>
-                <Link to="/contactus">
-                  <p className=" text-right max-xl:text-left max-md:mt-5">
-                    © Copyright 2023, Panacea Software Solutions
-                  </p>
-                </Link>
-              </div>
-            
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                  alt="Facebook"
+                  className="connection-logo w-10"
+                />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                  alt="Instagram"
+                  className="connection-logo w-10"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/panacee-software-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://ik.imagekit.io/2q7cgnqzi/icon/icons8-linkedin.svg?updatedAt=1710492054727"
+                  alt="LinkedIn"
+                  className="connection-logo-linkedin w-10"
+                />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={youtube}
+                  alt="YouTube"
+                  className="connection-logo w-10"
+                />
+              </a>
+            </div>
+            <div>
+              <Link to="/contactus">
+                <p className=" text-right max-xl:text-left max-md:mt-5">
+                  © Copyright 2023, Panacea Software Solutions
+                </p>
+              </Link>
+            </div>
           </div>
         </Narrow>
       </div>
