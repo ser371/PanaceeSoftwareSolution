@@ -4,7 +4,6 @@ import Getintouch from "./Getintouch";
 import Narrow from "./Common/Narrow";
 
 function Contactus() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -93,7 +92,7 @@ function Contactus() {
                 <h5 className="text-xl">Contact our fast support team</h5>
                 <a href="">
                   <h6 className=" text-blue-500 hover:text-blue-700 font-semibold text-lg">
-                    infopanacee@gmail.com
+                    info@panaceesoftwaresolutions.com
                   </h6>
                 </a>
               </Card>

@@ -1,22 +1,80 @@
 import React, { useState, useEffect } from "react";
 import Narrow from "../Components/Common/Narrow";
-import { Row, Col, Button } from "reactstrap";
-import Getintouch from "../Components/Getintouch";
+import { Row, Col } from "reactstrap";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const TestimonialComponent = () => {
+  const testimonials = [
+    {
+      quote:
+        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
+      name: "Jenny Wilson",
+      title: "Project Manager at Microsoft",
+    },
+    {
+      quote:
+        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
+      name: "Robert Fox",
+      title: "Founder at Brain.co",
+    },
+    {
+      quote:
+        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
+      name: "Kristin Watson",
+      title: "UX Designer at Google",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  return (
+    <div className="p-8 min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold text-center mb-12">
+        Trusted by <span className="text-blue-500">30k+</span> world class
+        companies & design teams
+      </h1>
+      <div className="max-w-5xl bg-sky-50 w-full">
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className=" p-6 rounded-lg shadow-md text-center">
+              <div className="flex justify-center mb-4">
+                <img
+                  src={`https://i.pravatar.cc/150?img=${index + 1}`}
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full"
+                />
+              </div>
+              <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
+              <h2 className="font-bold text-lg">{testimonial.name}</h2>
+              <p className="text-gray-500 text-sm">{testimonial.title}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
+};
 
 export default function Testimonials() {
   const [isVisible, setIsVisible] = useState(false);
   const isLargeScreen = () => window.innerWidth > 1024;
   const [isLarge, setIsLarge] = useState(isLargeScreen());
+
   useEffect(() => {
-    // Function to handle resize event
     const handleResize = () => {
       setIsLarge(isLargeScreen());
     };
 
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -26,12 +84,47 @@ export default function Testimonials() {
     setIsVisible(true);
   }, []);
 
+  const handleIframeClick = (url) => {
+    window.open(url, "_blank");
+  };
+
+  const cards = [
+    {
+      title: "Jeevshakti Foundation",
+      description:
+        "Jeevshakti Foundation, a charitable trust established in 2017, is committed to the welfare of stray animals in Delhi.",
+      url: "https://www.jeevshakti.in/",
+      type: "charitable trust",
+    },
+    {
+      title: "Tripperhub",
+      description:
+        "Tripperhub is a platform for travel enthusiasts to explore and share their travel experiences.",
+      url: "https://tripperhub.com/",
+      type: "traveler",
+    },
+    {
+      title: "maplawassociates",
+      description: "maplawassociates is a platform for laws enthusiasts.",
+      url: "https://maplawassociates.com/",
+      type: "judge",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div>
       <Narrow>
-        <div className="mb-24 mt-24 max-xl:mt-3">
+        <div className="pb-5 bg-gray-100 mt-12 max-xl:mt-3">
           <Row>
-            <Col className="firstbtnsec">
+            <Col className="firstbtnsec pt-5">
               <span className="abouta1">Testimonials</span>
             </Col>
           </Row>
@@ -43,140 +136,48 @@ export default function Testimonials() {
               <p className="text-6xl aboutheader1 text-center max-xl:text-3xl font-semibold">
                 Success Stories from Our Clients
               </p>
-
               <p className="aboutheader2 max-xl:px-3">
                 Read the stories of our satisfied customers.
               </p>
             </Col>
           </Row>
         </div>
-      </Narrow>
 
-      <div className="card1 px-48 max-xl:px-2 bg-[#F3F6FD] mb-32 py-10 ">
-
-          <div
-            className={` ${isLarge ? " stickycard1" : " "
-              } `}
-          >
-            <div className="jeevshaktibg relative  bg-cover bg-center bg-no-repeat h-[100vh] max-md:h-[40vh] p-40 max-xl:p-1 group rounded-xl">
-              <div className="absolute inset-0 bg-black opacity-5 group-hover:opacity-60 transition-opacity duration-300 rounded-xl"></div>
-              <div className="relative z-1 hidden group-hover:block transition-opacity duration-300 rounded-xl">
-                <div className="h-full w-full">
-                  <h1 className="text-white text-6xl max-xl:text-3xl font-bold text-center ">
-                    Jeevshakti
-                  </h1>
-                  <p className="text-white text-2xl max-xl:text-sm font-semibold mt-3 text-center leading-10">
-                    Jeevshakti Foundation, a charitable trust established in 2017,
-                    is committed to the welfare of stray animals in Delhi. Through
-                    initiatives like feeding, medical care, and sterilizations,
-                    they aim to improve the lives of these animals. Their
-                    innovative solutions and community involvement reflect their
-                    dedication to alleviating animal suffering and promoting
-                    compassion.
-                  </p>
-                  <div className="text-center mt-3">
-                    <a
-                      href="http://jeevshaktifoundation.org/"
-                      target="_blank"
-                      className="bg-blue-600 text-white text-xl max-xl:text-base font-bold px-4 py-2 rounded-full"
+        <div className="card1 px-48 bg-gray-100 max-xl:px-2 mb-32 py-10">
+          <Slider {...settings}>
+            {cards.map((card, index) => (
+              <div key={index} className={`${isLarge ? "stickycard1" : ""}`}>
+                <div className="flex items-center justify-center bg-white p-6 rounded-lg shadow-md max-w-5xl mx-auto">
+                  <div className="w-full">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleIframeClick(card.url)}
                     >
-                      Visit Website
-                    </a>
+                      <iframe
+                        src={card.url}
+                        title={card.title}
+                        className="w-full h-80 rounded-lg"
+                        style={{ border: "none", overflow: "hidden" }}
+                        scrolling="no"
+                      ></iframe>
+                    </div>
+                  </div>
+                  <div className="w-full p-6">
+                    <h2 className="font-bold text-2xl mb-2">{card.title}</h2>
+                    <p className="text-gray-600">{card.description}</p>
+                    <div className="mt-4">
+                      <p className="font-bold">{card.title}</p>
+                      <p className="text-gray-500">{card.type}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div
-            className={` ${isLarge ? " stickycard1" : " "
-              } `}
-          >
-          <div className="medecombg relative  bg-cover max-xl:bg-left bg-center bg-no-repeat h-[100vh] max-md:h-[40vh] p-40 mt-10 max-xl:p-1 group rounded-xl">
-            <div className="absolute inset-0 bg-black opacity-5 group-hover:opacity-60 transition-opacity duration-300 rounded-xl"></div>
-            <div className="relative z-1 hidden group-hover:block transition-opacity duration-300 rounded-xl">
-              <div className="h-full w-full">
-                <h1 className="text-white text-6xl max-xl:text-3xl font-bold text-center ">
-                  Medecom
-                </h1>
-                <p className="text-white text-2xl max-xl:text-sm font-semibold mt-3 text-center leading-10">
-                Medecom is a renowned provider of medical imaging software, specializing in Radiology and Mammography since 2000. Their solutions seamlessly integrate into radiology centers, clinics, and hospitals, offering ergonomic interfaces, optimized workflows, and secure exchanges. Medecom's mission is to facilitate study acquisition, diagnosis, and communication within radiology departments, ensuring efficient and effective processes.
-                </p>
-                <div className="text-center mt-3">
-                  <a
-                    href="https://mede-com.com/"
-                    target="_blank"
-                    className="bg-blue-600 max-xl:text-base text-white text-xl font-bold px-4 py-2 rounded-full"
-                  >
-                    Visit Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div
-            className={` ${isLarge ? " stickycard1" : " "
-              } `}
-          >
-          <div className="jeevshaktibg mt-10 relative  bg-cover bg-center bg-no-repeat h-[100vh] max-md:h-[40vh] p-40 max-xl:p-1 group rounded-xl">
-            <div className="absolute inset-0 bg-black opacity-5 group-hover:opacity-60 transition-opacity duration-300 rounded-xl"></div>
-            <div className="relative z-1 hidden group-hover:block transition-opacity duration-300 rounded-xl">
-              <div className="h-full w-full">
-                <h1 className="text-white text-6xl max-xl:text-3xl font-bold text-center">
-                  Jeevshakti
-                </h1>
-                <p className="text-white text-2xl max-xl:text-sm font-semibold mt-3 text-center leading-10">
-                  Jeevshakti Foundation, a charitable trust established in 2017,
-                  is committed to the welfare of stray animals in Delhi. Through
-                  initiatives like feeding, medical care, and sterilizations,
-                  they aim to improve the lives of these animals. Their
-                  innovative solutions and community involvement reflect their
-                  dedication to alleviating animal suffering and promoting
-                  compassion.
-                </p>
-                <div className="text-center mt-3">
-                  <a
-                    href="http://jeevshaktifoundation.org/"
-                    target="_blank"
-                    className="bg-blue-600 max-xl:text-base text-white text-xl font-bold px-4 py-2 rounded-full"
-                  >
-                    Visit Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div
-            className={` ${isLarge ? " stickycard1" : " "
-              } `}
-          >
-          <div className="medecombg relative  bg-cover bg-center bg-no-repeat h-[100vh] max-md:h-[40vh] p-40 mt-10 max-xl:p-1 group rounded-xl">
-            <div className="absolute inset-0 bg-black opacity-5 group-hover:opacity-60 transition-opacity duration-300 rounded-xl"></div>
-            <div className="relative z-1 hidden group-hover:block transition-opacity duration-300 rounded-xl">
-              <div className="h-full w-full">
-                <h1 className="text-white text-6xl max-xl:text-3xl font-bold text-center">
-                  Medecom
-                </h1>
-                <p className="text-white text-2xl max-xl:text-sm font-semibold mt-3 text-center leading-10">
-                Medecom is a renowned provider of medical imaging software, specializing in Radiology and Mammography since 2000. Their solutions seamlessly integrate into radiology centers, clinics, and hospitals, offering ergonomic interfaces, optimized workflows, and secure exchanges. Medecom's mission is to facilitate study acquisition, diagnosis, and communication within radiology departments, ensuring efficient and effective processes.
-                </p>
-                <div className="text-center mt-3">
-                  <a
-                    href="https://mede-com.com/"
-                    target="_blank"
-                    className="bg-blue-600 max-xl:text-base text-white text-xl font-bold px-4 py-2 rounded-full"
-                  >
-                    Visit Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-      </div>
+            ))}
+          </Slider>
+        </div>
+      </Narrow>
 
-      <Getintouch />
+      <TestimonialComponent />
     </div>
   );
 }

@@ -55,7 +55,7 @@ function Footer() {
                 <Row>
                   <Col className=" flex align-items-center gap-3">
                     <img
-                      src="https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/Panacee%20logo.png?updatedAt=1710924589184"
+                      src="https://ik.imagekit.io/zkybq7col/LogoCompany.svg"
                       alt=""
                       className="footerlogo"
                     />
