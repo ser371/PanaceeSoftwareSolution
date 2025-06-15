@@ -9,21 +9,33 @@ const TestimonialComponent = () => {
   const testimonials = [
     {
       quote:
-        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
-      name: "Jenny Wilson",
-      title: "Project Manager at Microsoft",
+        "Panacee Software Company transformed our vision into a powerful website that truly represents Jeev Shakti Foundation’s mission. Their team was professional, responsive, and creative throughout. The result is a beautiful, user-friendly platform that has boosted our outreach and impact. We highly recommend Panacee for any web development needs!",
+      name: "Jeev Shakti",
+      title: "Team Jeev Shakti Foundation",
     },
     {
       quote:
-        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
-      name: "Robert Fox",
-      title: "Founder at Brain.co",
+        "Panacee Software Company brought Tripper Hub’s global vision to life with a sleek, modern, and high-converting website. From showcasing exotic world tours to simplifying bookings, everything feels effortless. Their design boosted our credibility and customer trust instantly. A top-tier team for anyone in the travel industry!",
+      name: "Tripper Hub",
+      title: "India’s Leading Global Travel Planner",
     },
     {
       quote:
-        "Ammet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.",
-      name: "Kristin Watson",
-      title: "UX Designer at Google",
+        "Panacee Software Company delivered an outstanding website for Map Law Associates. Their team understood our unique legal brand, crafting a clean, professional, and highly functional site. The intuitive design, clear practice-area layouts, and streamlined client-intake process have significantly increased our credibility and client inquiries. Truly exceptional web development!",
+      name: "Map Law Associates",
+      title: "Expert Legal Advisors",
+    },
+    {
+      quote:
+        "Panacee Software Company truly encapsulated Jeev Shakti’s compassionate mission in their recent website redesign. The fresh, responsive layout—with seamless navigation, vivid rescue stories, and clear donation pathways—has significantly enhanced our reach and engagement. Their dedication, expertise, and attention to detail made the process smooth and impactful. Highly recommended!",
+      name: "Jeev Shakti Foundation",
+      title: "Animal Rescue & Rehabilitation Non‑Profit",
+    },
+    {
+      quote:
+        "Panacee Software Company transformed our vision into a vibrant, user-friendly website for Sonia Narang Diet Clinic. Their responsive design, clear program breakdowns, and easy appointment booking have made a huge difference. The site feels trustworthy, professional, and welcoming—exactly what our clients need. A perfect partner for health & wellness businesses!",
+      name: "Sonia Narang Diet Clinic",
+      title: "Leading Nutrition & Diet Therapy Practice",
     },
   ];
 
@@ -33,6 +45,10 @@ const TestimonialComponent = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
   };
 
   return (
@@ -90,24 +106,39 @@ export default function Testimonials() {
 
   const cards = [
     {
-      title: "Jeevshakti Foundation",
+      title: "Jeev Shakti Foundation",
       description:
-        "Jeevshakti Foundation, a charitable trust established in 2017, is committed to the welfare of stray animals in Delhi.",
+        "Jeev Shakti Foundation, established in 2017, is a Delhi-based charitable trust dedicated to rescuing, rehabilitating, and caring for stray and injured animals. Through veterinary services, adoption drives, and public awareness programs, the foundation strives to create a more compassionate society for animals.",
       url: "https://www.jeevshakti.in/",
-      type: "charitable trust",
+      type: "Animal Welfare NGO",
     },
     {
-      title: "Tripperhub",
+      title: "Tripper Hub",
       description:
-        "Tripperhub is a platform for travel enthusiasts to explore and share their travel experiences.",
+        "Tripper Hub is a global travel planning platform offering curated domestic and international tour packages. With an emphasis on convenience, 24/7 support, and expert itineraries, it’s a one-stop destination for travelers seeking memorable journeys worldwide.",
       url: "https://tripperhub.com/",
-      type: "traveler",
+      type: "Travel & Tourism Company",
     },
     {
-      title: "maplawassociates",
-      description: "maplawassociates is a platform for laws enthusiasts.",
+      title: "Map Law Associates",
+      description:
+        "Map Law Associates is a full-service legal consultancy firm specializing in civil, criminal, corporate, and property law. The firm is known for its ethical practices, timely advice, and tailored legal strategies for individuals and businesses alike.",
       url: "https://maplawassociates.com/",
-      type: "judge",
+      type: "Legal Consultancy Firm",
+    },
+    {
+      title: "Sonia Narang Diet Clinic",
+      description:
+        "Sonia Narang Diet Clinic provides personalized nutrition and diet therapy programs designed to improve health and lifestyle. Led by renowned dietitian Sonia Narang, the clinic offers expert plans for weight management, therapeutic nutrition, and holistic well-being.",
+      url: "https://sonianarangdietclinic.trektrail.in/",
+      type: "Health & Wellness Clinic",
+    },
+    {
+      title: "Jeev Shakti by AJ Foundation",
+      description:
+        "Powered by AJ Foundation, this digital platform supports the Jeev Shakti mission by offering online visibility for their animal welfare work. It highlights rescue operations, encourages donations, and connects volunteers with impactful causes to support stray animal care.",
+      url: "https://jeevshakti.ajfoundation.co.in/",
+      type: "Animal Welfare Platform",
     },
   ];
 
@@ -117,6 +148,10 @@ export default function Testimonials() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
   };
 
   return (
@@ -143,7 +178,7 @@ export default function Testimonials() {
           </Row>
         </div>
 
-        <div className="card1 px-48 bg-gray-100 max-xl:px-2 mb-32 py-10">
+        <div className="card1 px-48 bg-gray-100 max-xl:px-2 py-10">
           <Slider {...settings}>
             {cards.map((card, index) => (
               <div key={index} className={`${isLarge ? "stickycard1" : ""}`}>
