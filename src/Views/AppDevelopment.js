@@ -3,161 +3,197 @@ import Narrow from "../Components/Common/Narrow";
 import { Row, Col, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import ShowcaseSlider from "../Components/ShowcaseSlider";
-import Getintouch from "../Components/Getintouch";
-import img1 from "../Images/App-development-process-Feature-image.jpg"
+import img1 from "../Images/App-development-process-Feature-image.jpg";
 import img2 from "../Images/app-development-courses-header-image.png";
+import "./AppDevelopment.css";
 
 export default function AppDevelopment() {
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, []);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  const services = [
+    {
+      title: "UI/UX and Prototyping",
+      desc: "We create Android applications with a unique approach to UI/UX. Every application we develop undergoes rigorous testing to ensure visual appeal and functionalities. Our experts create robust wireframes and prototypes to ensure your application is intuitive.",
+      icon: "fa-solid fa-paint-brush",
+    },
+    {
+      title: "Custom Android App Development",
+      desc: "Whether a business-oriented or community-specific application, we can help you bring your unique Android apps to life. Our custom app development experts closely examine your app's unique approach to creating custom code, architecture, and UI/UX.",
+      icon: "fa-solid fa-mobile-screen-button",
+    },
+    {
+      title: "Android App QA & Testing",
+      desc: "Let's make your application world-class with our Android app QA & testing. We run a full-scale audit of your applications to find possible bugs and improve the quality of the product with our comprehensive set of DX, QA, and QE tools.",
+      icon: "fa-solid fa-bug-slash",
+    },
+    {
+      title: "Android App Maintenance",
+      desc: "Regular and timely maintenance is the essence of a successful Android application. With our dedicated app support and maintenance services, we can ensure your software performs crash-free and is top-notch.",
+      icon: "fa-solid fa-screwdriver-wrench",
+    },
+    {
+      title: "Android App Modernization",
+      desc: "Still, stuck with an Android application that uses old methodologies to tackle the latest operations? Revive your Android app with our app modernization services.",
+      icon: "fa-solid fa-arrows-rotate",
+    },
+    {
+      title: "Android App Consulting",
+      desc: "Have unique app ideas? Let's turn them into reality with our Android app consulting services. Our experts walk you through every step of app building.",
+      icon: "fa-solid fa-lightbulb",
+    },
+  ];
+
   return (
     <>
-      <Narrow>
-        <div className="mb-24 mt-24 max-xl:mt-3">
-          <Row>
-            <Col className="firstbtnsec ">
-              <span className="abouta1">App Development</span>
-            </Col>
-          </Row>
-          <Row
-            className={`header ${isVisible ? "fade-in" : ""}`}
-            style={{ marginTop: "10px" }}
-          >
-            <Col>
-              <p className="text-6xl aboutheader1 text-center max-xl:text-3xl font-semibold">
-                Unlock Your Business Potential with Customized <br /> App
-                Development Solutions
+      {/* Hero Section with Breadcrumb */}
+      <div
+        style={{
+          background: "white",
+          color: "#1a237e",
+          padding: "6rem 0",
+          width: "100vw",
+          marginLeft: "calc(-50vw + 50%)",
+          marginRight: "calc(-50vw + 50%)",
+        }}
+      >
+        <Narrow>
+          <Row className="align-items-center">
+            {/* Left Side: Text Content with Breadcrumb */}
+            <Col md="6">
+              <nav aria-label="breadcrumb" className="mb-4">
+                <ol
+                  className="breadcrumb bg-transparent p-0"
+                  style={{ background: "none", marginBottom: 0 }}
+                >
+                  <li className="breadcrumb-item">
+                    <Link to="/" style={{ color: "#007bff" }}>
+                      Home
+                    </Link>
+                  </li>
+                  <li className="breadcrumb-item">
+                    <Link to="/service" style={{ color: "#007bff" }}>
+                      service
+                    </Link>
+                  </li>
+                  <li
+                    className="breadcrumb-item active"
+                    aria-current="page"
+                    style={{ color: "#1a237e" }}
+                  >
+                    App Development
+                  </li>
+                </ol>
+              </nav>
+              <p
+                style={{
+                  color: "#a0aec0",
+                  fontSize: "14px",
+                  letterSpacing: "1px",
+                }}
+              >
+                CASE STUDY
               </p>
-
-              <p className="aboutheader2 max-xl:px-3">
-                Transform Your Vision into Reality with Innovative Mobile
-                Applications Tailored to Your Needs
+              <h2
+                style={{
+                  fontSize: "42px",
+                  fontWeight: "bold",
+                  lineHeight: "1.2",
+                  color: "#1a237e",
+                }}
+              >
+                App Development Services <br /> Tailored for Impact
+              </h2>
+              <p
+                className="mt-4"
+                style={{ fontSize: "18px", color: "#2d3748" }}
+              >
+                Empower your business with our full-cycle Android app
+                development solutions. From intuitive design to scalable
+                deployment – we build for performance and growth.
               </p>
-            </Col>
-          </Row>
-        </div>
-
-        <div className="background rounded-lg p-32 max-xl:p-3 mt-32 mb-32">
-          <h1 className="text-5xl font-bold mb-5">App Development Solutions</h1>
-          <p className="text-2xl leading-10 text-gray-700">
-            At Panacea Infosolutions, we don't just build apps; we craft
-            experiences. Harnessing the power of cutting-edge technology and
-            innovative design, we specialize in developing customized mobile
-            applications that elevate your brand and engage your audience like
-            never before.
-          </p>
-
-          <img
-            src={img1}
-            className="mt-10 w-full"
-            alt=""
-          />
-
-          <p className="text-2xl leading-10 text-gray-700 mt-10">
-            Why Choose Panacea Infosolutions for Your App Development Needs? <br /><br />
-            <span className="font-bold">Tailored Solutions</span>: Our expert team takes the time to understand
-            your unique business requirements and objectives to deliver
-            tailor-made app solutions that align perfectly with your vision. <br />
-            <span className="font-bold">Innovative Design</span>: We blend creativity with functionality to create
-            visually stunning and user-friendly interfaces that captivate users
-            and enhance their overall experience. <br /> <span className="font-bold">Advanced Technology</span>:
-            Leveraging the latest advancements in mobile app development
-            technology, we ensure that your app is built to perform seamlessly
-            across all devices and platforms. <br /> <span className="font-bold">Agile Development Process</span>: Our
-            agile development methodology ensures rapid delivery of high-quality
-            apps, allowing you to stay ahead of the competition and adapt to
-            evolving market trends.
-          </p>
-
-          <h1 className="text-3xl font-bold mt-20">
-          Discovery
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          We begin by conducting in-depth research and analysis to gain a thorough understanding of your business objectives, target audience, and market landscape.
-          </p>
-          <h1 className="text-3xl font-bold mt-20">
-          Design
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          Our team of talented designers then translates your vision into visually stunning app designs that reflect your brand identity and resonate with your target audience.
-          </p>
-          <h1 className="text-3xl font-bold mt-20">
-          Development
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          Using the latest tools and technologies, our experienced developers bring your app to life, ensuring seamless functionality and optimal performance across all devices.
-          </p>
-          <h1 className="text-3xl font-bold mt-20">
-          Testing
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          We conduct rigorous testing at every stage of the development process to identify and address any bugs or issues, ensuring that your app meets the highest quality standards.
-          </p>
-          <h1 className="text-3xl font-bold mt-20">
-          Deployment 
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          Once your app is ready, we handle the deployment process, ensuring a smooth and hassle-free launch on the App Store and Google Play Store.
-          </p>
-          <h1 className="text-3xl font-bold mt-20">
-          Support & Maintenance 
-          </h1>
-          <p className="text-2xl leading-10 text-gray-700 mt-3">
-          Our commitment to excellence doesn't end with the launch of your app. We provide ongoing support and maintenance services to ensure that your app continues to perform flawlessly and remains up-to-date with the latest technologies and trends.
-          </p>
-          <img
-            src={img2}
-            alt="image1"
-            className="my-10 w-full"
-          />
-          <p className="text-2xl leading-10 text-gray-700 mt-16">
-          Ready to take your business to the next level with a customized mobile app? Contact us today to schedule a consultation with one of our app development experts and kickstart your app development journey with Panacea Infosolutions.
-          </p>
-        </div>
-        <div className="assitance py-28 mb-32 ">
-          <Row>
-            <Col className="assistanceimg">
-              <img
-                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-4.png"
-                alt=""
-              />
-              <img
-                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-3.png"
-                alt=""
-              />
-              <img
-                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-2.png"
-                alt=""
-              />
-              <img
-                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-1.png"
-                alt=""
-              />
-            </Col>
-          </Row>
-
-          <div>
-            <div className="assitanttext w-9/12 mx-auto text-center ">
-              <h1 className="text-4xl font-bold ">
-                Need any further assitance?
-              </h1>
-              <h3 className="text-2xl text-gray-200  ">
-                Feel free to reach out for any inquiries or assistance.
-              </h3>
               <Link to="/contactus">
-                <Button className="bookappoinmentnow">
-                  Book an appointment now
+                <Button
+                  color="primary"
+                  style={{
+                    marginTop: "2rem",
+                    backgroundColor: "#007bff",
+                    border: "none",
+                    padding: "10px 24px",
+                    fontSize: "16px",
+                    fontWeight: "500",
+                    borderRadius: "8px",
+                  }}
+                >
+                  Book an Appointment
                 </Button>
               </Link>
-            </div>
-          </div>
+            </Col>
+
+            {/* Right Side: Hero Image */}
+            <Col md="6" className="text-center">
+              <img
+                src={img2}
+                alt="App Development Process"
+                style={{
+                  maxWidth: "100%",
+                  borderRadius: "12px",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
+                }}
+              />
+            </Col>
+          </Row>
+        </Narrow>
+      </div>
+
+      <Narrow>
+        <div
+          className="py-24 text-white mt-5"
+          style={{
+            background: "white",
+            width: "100vw",
+            marginLeft: "calc(-50vw + 50%)",
+            marginRight: "calc(-50vw + 50%)",
+          }}
+        >
+          <Narrow>
+            <h2
+              className="text-4xl font-bold text-center mb-12"
+              style={{ color: "#1a237e" }}
+            >
+              Our Range of Android App Development Services
+            </h2>
+            <p
+              className="text-center mb-16 text-lg"
+              style={{ color: "#1a237e" }}
+            >
+              We offer Android app developments across various platforms. Have
+              something unique in mind? Let's get started!
+            </p>
+            <Row>
+              {services.map((item, index) => (
+                <Col md="4" className="mb-5" key={index}>
+                  <div className="service-card">
+                    <div className="service-icon">
+                      <i className={item.icon}></i>
+                    </div>
+                    <h4 className="text-xl font-semibold mb-2 text-center">
+                      {item.title}
+                    </h4>
+                    <p style={{ fontSize: "14px", color: "#1a237e" }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Narrow>
         </div>
       </Narrow>
       <div className="py-24 max-xl:py-5 px-3 background">
@@ -165,9 +201,9 @@ export default function AppDevelopment() {
           <Row>
             <Col md="4" className="mt-28 max-xl:mt-5">
               <p className="home1para">PROJECTS</p>
-              <h1 className="empowermentHeading">
+              <h2 className="empowermentHeading">
                 Showcase of our recognized work.
-              </h1>
+              </h2>
               <p className="homepara3">
                 Our collaborative approach ensures that we truly understand our
                 clients unique requirements and challenges.
@@ -230,14 +266,49 @@ export default function AppDevelopment() {
                 padding: "3rem",
               }}
             >
-              <ShowcaseSlider></ShowcaseSlider>
+              <ShowcaseSlider />
             </Col>
           </Row>
         </Narrow>
+        <div className="assitance py-28 mb-32 ">
+          <Row>
+            <Col className="assistanceimg">
+              <img
+                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-4.png"
+                alt=""
+              />
+              <img
+                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-3.png"
+                alt=""
+              />
+              <img
+                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-2.png"
+                alt=""
+              />
+              <img
+                src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/small-img-1.png"
+                alt=""
+              />
+            </Col>
+          </Row>
+
+          <div>
+            <div className="assitanttext w-9/12 mx-auto text-center ">
+              <h2 className="text-4xl font-bold ">
+                Need any further assitance?
+              </h2>
+              <h3 className="text-2xl text-gray-200  ">
+                Feel free to reach out for any inquiries or assistance.
+              </h3>
+              <Link to="/contactus">
+                <Button className="bookappoinmentnow">
+                  Book an appointment now
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      <Narrow>
-        <Getintouch />
-      </Narrow>
     </>
   );
 }

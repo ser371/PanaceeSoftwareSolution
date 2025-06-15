@@ -295,7 +295,11 @@ p {
 }
 
 .darkbg {
-  background: #1c1c1c;
+  background-image: url("./Images/memento.webp"); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
 }
 
 .contypecard a {
