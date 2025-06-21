@@ -111,49 +111,45 @@ export default function CRM() {
         </Narrow>
       </section>
       {/* --- Features Section --- */}
-      <section className="bg-[#1351d8] py-24 text-white">
+      <section className="bg-white py-18">
         <Narrow>
-          <article className="flex flex-col lg:flex-row items-center gap-16 lg:gap-28">
-            {/* Image Section */}
-            <div className="lg:w-1/2 w-full">
-              <img
-                src={img1}
-                alt="CRM system for customer-centric travel business"
-                className="w-full h-auto rounded-xl shadow-lg"
-                loading="lazy"
-              />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Section */}
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
+                Transform Your Travel Business with{" "}
+                <span className="text-blue-600">CRM Software</span>
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Panacee’s cloud-powered CRM streamlines your travel business
+                with a centralized, smart platform built for tour operators and
+                agents.
+              </p>
+
+              <ul className="space-y-3 text-gray-600 text-base pl-5 list-disc">
+                <li>Automate lead tracking and follow-ups</li>
+                <li>Build custom itineraries effortlessly</li>
+                <li>Optimize your sales funnel from one dashboard</li>
+                <li>Boost customer satisfaction and retention</li>
+              </ul>
             </div>
 
-            {/* Text Content Section */}
-            <div className="lg:w-1/2 w-full">
-              <header className="mb-6">
-                <h2 className="text-4xl font-extrabold leading-tight mb-4">
-                  About Travel CRM Software Solutions
-                </h2>
-                <p className="text-lg leading-relaxed text-gray-200">
-                  Discover how Panacee’s cloud-powered CRM software transforms
-                  travel businesses by streamlining workflows, improving
-                  customer relationships, and boosting revenue. Ideal for tour
-                  operators and agents, our intelligent platform manages leads,
-                  follow-ups, itineraries, sales funnels, and much more — all
-                  from a centralized dashboard.
-                </p>
-              </header>
-
-              {/* Optional CTA */}
-              <div className="mt-8">
-                <a
-                  href="/contact"
-                  className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-gray-100 transition"
-                  aria-label="Learn more or contact Panacee CRM team"
-                >
-                  Learn More
-                </a>
+            {/* Image Section */}
+            <div className="w-full">
+              <div className="relative rounded-xl overflow-hidden shadow-xl">
+                <img
+                  src={img1}
+                  alt="CRM system for travel businesses"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent rounded-xl"></div>
               </div>
             </div>
-          </article>
+          </div>
         </Narrow>
       </section>
+
       {/* --- Additional CRM Feature Highlights --- */}
       <section className="bg-white py-20">
         <Narrow>
@@ -168,65 +164,112 @@ export default function CRM() {
             </p>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Lead Management",
-                desc: "Capture and centralize leads from platforms like Facebook, Instagram, and Google Sheets for effective nurturing.",
-                icon: "https://img.icons8.com/ios-filled/50/supplier.png",
-                alt: "Lead management icon",
-              },
-              {
-                title: "Follow-Ups",
-                desc: "Never miss an inquiry with automated reminders and smart query tracking for better customer relationships.",
-                icon: "https://img.icons8.com/ios-filled/50/time-machine.png",
-                alt: "Follow-up icon",
-              },
-              {
-                title: "Quotation Builder",
-                desc: "Easily generate professional quotations with tax and pricing automation built-in.",
-                icon: "https://img.icons8.com/ios-filled/50/invoice.png",
-                alt: "Quotation builder icon",
-              },
-              {
-                title: "Masters Management",
-                desc: "Streamline your operations with master-level control over destinations, hotels, activities, and transfers.",
-                icon: "https://img.icons8.com/ios-filled/50/settings.png",
-                alt: "Masters management icon",
-              },
-              {
-                title: "Supplier Communication",
-                desc: "Facilitate seamless collaboration and negotiations through integrated supplier chat and notifications.",
-                icon: "https://img.icons8.com/ios-filled/50/supplier.png",
-                alt: "Supplier communication icon",
-              },
-              {
-                title: "Invoices & Vouchers",
-                desc: "Easily monitor staff invoices, issue travel vouchers, and manage compliance in one dashboard.",
-                icon: "https://img.icons8.com/ios-filled/50/document.png",
-                alt: "Invoice and voucher icon",
-              },
-            ].map((item, idx) => (
-              <article
-                key={idx}
-                className="bg-gray-50 rounded-2xl shadow hover:shadow-lg transition-shadow duration-300 p-6 text-center"
-              >
+          <div>
+            {/* Modal Overlay */}
+            <div
+              id="featureModal"
+              className="fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center hidden"
+              onClick={(e) => {
+                if (e.target.id === "featureModal") {
+                  e.currentTarget.classList.add("hidden");
+                }
+              }}
+            >
+              <div className="bg-white max-w-md w-full rounded-xl p-6 shadow-lg text-center relative">
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("featureModal")
+                      .classList.add("hidden")
+                  }
+                  className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-xl"
+                >
+                  &times;
+                </button>
                 <img
-                  src={item.icon}
-                  alt={item.alt}
-                  className="w-12 h-12 mx-auto mb-4"
-                  loading="lazy"
+                  id="modalIcon"
+                  alt="Feature Icon"
+                  className="w-14 h-14 mx-auto mb-4"
                 />
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-base">{item.desc}</p>
-              </article>
-            ))}
+                <h3
+                  id="modalTitle"
+                  className="text-2xl font-bold text-gray-800 mb-2"
+                ></h3>
+                <p id="modalDesc" className="text-gray-600 text-base"></p>
+              </div>
+            </div>
+
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Lead Management",
+                  desc: "Capture and centralize leads from platforms like Facebook, Instagram, and Google Sheets for effective nurturing.",
+                  icon: "https://img.icons8.com/ios-filled/50/supplier.png",
+                  alt: "Lead management icon",
+                },
+                {
+                  title: "Follow-Ups",
+                  desc: "Never miss an inquiry with automated reminders and smart query tracking for better customer relationships.",
+                  icon: "https://img.icons8.com/ios-filled/50/time-machine.png",
+                  alt: "Follow-up icon",
+                },
+                {
+                  title: "Quotation Builder",
+                  desc: "Easily generate professional quotations with tax and pricing automation built-in.",
+                  icon: "https://img.icons8.com/ios-filled/50/invoice.png",
+                  alt: "Quotation builder icon",
+                },
+                {
+                  title: "Masters Management",
+                  desc: "Streamline your operations with master-level control over destinations, hotels, activities, and transfers.",
+                  icon: "https://img.icons8.com/ios-filled/50/settings.png",
+                  alt: "Masters management icon",
+                },
+                {
+                  title: "Supplier Communication",
+                  desc: "Facilitate seamless collaboration and negotiations through integrated supplier chat and notifications.",
+                  icon: "https://img.icons8.com/ios-filled/50/supplier.png",
+                  alt: "Supplier communication icon",
+                },
+                {
+                  title: "Invoices & Vouchers",
+                  desc: "Easily monitor staff invoices, issue travel vouchers, and manage compliance in one dashboard.",
+                  icon: "https://img.icons8.com/ios-filled/50/document.png",
+                  alt: "Invoice and voucher icon",
+                },
+              ].map((item, idx) => (
+                <article
+                  key={idx}
+                  className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-gray-100 p-6 text-center"
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.alt}
+                    className="w-12 h-12 mx-auto mb-4 cursor-pointer"
+                    loading="lazy"
+                    onClick={() => {
+                      document.getElementById("modalIcon").src = item.icon;
+                      document.getElementById("modalIcon").alt = item.alt;
+                      document.getElementById("modalTitle").textContent =
+                        item.title;
+                      document.getElementById("modalDesc").textContent =
+                        item.desc;
+                      document
+                        .getElementById("featureModal")
+                        .classList.remove("hidden");
+                    }}
+                  />
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-base">{item.desc}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </Narrow>
       </section>
-         
     </main>
   );
 }

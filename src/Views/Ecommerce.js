@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 import ecommerce from "../Images/commerce.webp";
 
 export default function Ecommerce() {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("Frontend");
 
   const technologiesData = {
@@ -148,14 +147,30 @@ export default function Ecommerce() {
   const tabs = ["Frontend", "Backend", "Integrations", "Cloud"];
 
   useEffect(() => {
-    setIsVisible(true);
+    const elements = document.querySelectorAll(".ecommerce-card");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        } else {
+          entry.target.classList.remove("fade-in");
+        }
+      });
+    });
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div>
       <Narrow>
         {/* Page Header */}
-        <div className="mb-36 mt-24 max-xl:mt-3">
+        <div className="mb-20 mt-24 max-xl:mt-3">
           <Row className="mb-4">
             <Col>
               <nav className="text-sm text-gray-500">
@@ -180,14 +195,12 @@ export default function Ecommerce() {
 
           <Row className="items-center max-xl:flex-col-reverse">
             <Col md="6">
-              <h1 className="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                E-commerce
-              </h1>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <h1 className="delingheading">E-commerce</h1>
+              <h6 className="delingcontent">
                 Ready to take your business online? Our comprehensive e-commerce
                 solutions help you reach more customers, boost sales, and grow
                 in the digital marketplace.
-              </p>
+              </h6>
             </Col>
             <Col md="6" className="text-end max-xl:text-center mb-4 mb-md-0">
               <img
@@ -204,85 +217,77 @@ export default function Ecommerce() {
           <div className="container">
             <div className="row mb-5">
               <div className="col text-center">
-                <h2 className="display-5 fw-regular mb-3 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                <h3 className="delingheading">
                   Ecommerce Development Services
-                </h2>
-                <p className="lead text-muted max-w-3xl mx-auto">
+                </h3>
+                <h6 className="delingcontent">
                   We adopt a rapid and reliable approach with the best
                   E-commerce services for organisations to achieve their
                   business goals. Eager to know what our expertise can
                   contribute to your business? Here we go!
-                </p>
+                </h6>
               </div>
             </div>
 
-            <div className="row row-cols-md-2 row-cols-lg-3 g-4">
-              {[
-                {
-                  img: "https://admin.wac.co/uploads/Ecommerce_consulting_a2a0a2ccd5.svg",
-                  title: "E-commerce Consulting",
-                  desc: "Get our consulting services that guide your business for result-oriented and highly functional ecommerce sites with delightful customer experiences.",
-                },
-                {
-                  img: "https://admin.wac.co/uploads/Hosting_and_infrastructure_0541a89f35.svg",
-                  title: "Hosting and Infrastructure Management",
-                  desc: "Secure and optimise your server with the best ecommerce hosting services and ensure peak performance with infrastructure management.",
-                },
-                {
-                  img: "https://admin.wac.co/uploads/Manage_and_Maintain_Application_d6ef74ee9b.svg",
-                  title: "Manage and Maintain Applications",
-                  desc: "We manage and maintain applications across multiple channels to maximise opportunities with professional ecommerce development services.",
-                },
-                {
-                  img: "https://admin.wac.co/uploads/E_Commerce_Audit_928ce00f5e.svg",
-                  title: "E-Commerce Audit",
-                  desc: "Scale your ecommerce site's visibility through an ecommerce audit to identify the key areas of improvement, performance, conversions, and ROI.",
-                },
-                {
-                  img: "https://admin.wac.co/uploads/Migration_and_Upgrade_7d656374f9.svg",
-                  title: "Migration and Upgrades",
-                  desc: "Get the services of the top ecommerce development company in India and migrate to ecommerce platforms or upgrade for the advanced features.",
-                },
-                {
-                  img: "https://admin.wac.co/uploads/Integration_16e4b2da81.svg",
-                  title: "Integration",
-                  desc: "Integrate your ecommerce site with a huge array of third-party platforms and solutions to gain additional business capabilities and expand to new markets.",
-                },
-              ].map((item, idx) => (
-                <div className="col" key={idx}>
-                  <div className="p-4 border h-100 bg-white rounded-lg shadow-sm text-center transition-all duration-300 hover:shadow-xl hover:border-blue-200 hover:scale-[1.02] hover:bg-gradient-to-b hover:from-white hover:to-blue-50">
-                    <div className="mb-4 p-3 bg-blue-50 rounded-full inline-block transform transition-transform duration-300 hover:scale-110">
-                      <img
-                        alt={item.title}
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        src={item.img}
-                        className="mb-0"
-                        style={{ color: "transparent" }}
-                      />
-                    </div>
-                    <h3 className="fw-bold text-xl mb-3 text-gray-800">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray mb-0 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Narrow>
+              <div className="professionalservicescontainer mt-20 max-xl:mt-2 pb-32 max-xl:pb-0">
+                <Row className="professionalservicesrow justify-between w-full max-xl:p-3 flex max-xl:flex-col max-xl:gap-3">
+                  {[
+                    {
+                      img: "https://admin.wac.co/uploads/Ecommerce_consulting_a2a0a2ccd5.svg",
+                      title: "E-commerce Consulting",
+                      desc: "Expert consulting to build result-driven, high-functioning ecommerce sites customers love.",
+                    },
+                    {
+                      img: "https://admin.wac.co/uploads/Hosting_and_infrastructure_0541a89f35.svg",
+                      title: "Hosting and Infrastructure Management",
+                      desc: "Secure and optimise your server with the best ecommerce hosting services.",
+                    },
+                    {
+                      img: "https://admin.wac.co/uploads/Manage_and_Maintain_Application_d6ef74ee9b.svg",
+                      title: "Manage and Maintain Applications",
+                      desc: "Manage and maintain ecommerce apps to boost performance, reach, and reliability.",
+                    },
+                    {
+                      img: "https://admin.wac.co/uploads/E_Commerce_Audit_928ce00f5e.svg",
+                      title: "E-Commerce Audit",
+                      desc: "Boost your ecommerce visibility with audits that reveal gaps in performance, conversions, and ROI.",
+                    },
+                    {
+                      img: "https://admin.wac.co/uploads/Migration_and_Upgrade_7d656374f9.svg",
+                      title: "Migration and Upgrades",
+                      desc: "Migrate or upgrade with India's top ecommerce experts to unlock advanced features and growth.",
+                    },
+                  ].map((item, idx) => (
+                    <Col key={idx} sm={12} md={2}>
+                      <div className="professionalservicescard ecommerce-card">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          className="services5"
+                          width="60"
+                          height="60"
+                          loading="lazy"
+                          style={{ marginBottom: "10px" }}
+                        />
+                        <div className="text-xl font-bold">{item.title}</div>
+                        <p>{item.desc}</p>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              </div>
+            </Narrow>
           </div>
         </section>
 
         {/* === Technologies Section with Swiper === */}
-        <section className="my-20">
-          <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+        <section className="my-5">
+          <h5 className="delingheading text-center mb-5">
             Technologies We Use For E-commerce
-          </h2>
+          </h5>
 
-          <div className="flex justify-center gap-4 mb-6">
+          <div className="flex justify-center gap-4 mb-10">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -309,7 +314,7 @@ export default function Ecommerce() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            className="h-full"
+            className="h-full mb-5"
           >
             {technologiesData[activeTab].map((tech, idx) => (
               <SwiperSlide key={idx}>
@@ -326,9 +331,7 @@ export default function Ecommerce() {
                     <Link
                       to={tech.link}
                       className="mt-4 text-blue-600 font-medium inline-block hover:text-blue-700 transition-colors"
-                    >
-                      Learn more →
-                    </Link>
+                    ></Link>
                   )}
                 </div>
               </SwiperSlide>

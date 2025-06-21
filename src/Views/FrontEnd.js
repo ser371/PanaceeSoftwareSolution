@@ -111,10 +111,11 @@ export default function FrontEnd() {
       {/* Development Process */}
       <section className="py-28 bg-white border-t border-gray-200">
         <Narrow>
-          <h2 className="text-4xl font-bold text-center mb-20 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
             Our Frontend Process
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
               {
                 title: "Discovery & Planning",
@@ -147,16 +148,20 @@ export default function FrontEnd() {
                 icon: "🚀",
               },
             ].map((step, idx) => (
-              <div
-                key={idx}
-                className="flex items-start gap-5 p-6 bg-white shadow-md rounded-2xl border border-gray-100 hover:shadow-lg transition duration-300"
-              >
-                <div className="text-4xl">{step.icon}</div>
+              <div key={idx} className="flex items-start gap-4 p-2">
+                {/* Simple icon badge */}
+                <div className="w-12 h-12 flex items-center justify-center text-2xl bg-gray-100 rounded-full text-gray-800">
+                  {step.icon}
+                </div>
+
+                {/* Text content */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-base">{step.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {step.desc}
+                  </p>
                 </div>
               </div>
             ))}

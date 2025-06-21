@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ShowcaseSlider from "../Components/ShowcaseSlider";
 import img1 from "../Images/App-development-process-Feature-image.jpg";
 import img2 from "../Images/app-development-courses-header-image.png";
-import "./AppDevelopment.css";
+import "../App.css";
 
 export default function AppDevelopment() {
   //   useEffect(() => {
@@ -20,22 +20,22 @@ export default function AppDevelopment() {
   const services = [
     {
       title: "UI/UX and Prototyping",
-      desc: "We create Android applications with a unique approach to UI/UX. Every application we develop undergoes rigorous testing to ensure visual appeal and functionalities. Our experts create robust wireframes and prototypes to ensure your application is intuitive.",
+      desc: "We create Android applications with a unique approach to UI/UX. Every application we develop undergoes rigorous testing to ensure visual appeal and functionalities.",
       icon: "fa-solid fa-paint-brush",
     },
     {
       title: "Custom Android App Development",
-      desc: "Whether a business-oriented or community-specific application, we can help you bring your unique Android apps to life. Our custom app development experts closely examine your app's unique approach to creating custom code, architecture, and UI/UX.",
+      desc: "Whether a business-oriented or community-specific application, we can help you bring your unique Android apps to life.",
       icon: "fa-solid fa-mobile-screen-button",
     },
     {
       title: "Android App QA & Testing",
-      desc: "Let's make your application world-class with our Android app QA & testing. We run a full-scale audit of your applications to find possible bugs and improve the quality of the product with our comprehensive set of DX, QA, and QE tools.",
+      desc: "Let's make your application world-class with our Android app QA & testing. We run a full-scale audit of your applications to find possible bugs.",
       icon: "fa-solid fa-bug-slash",
     },
     {
       title: "Android App Maintenance",
-      desc: "Regular and timely maintenance is the essence of a successful Android application. With our dedicated app support and maintenance services, we can ensure your software performs crash-free and is top-notch.",
+      desc: "Regular and timely maintenance is the essence of a successful Android application. With our dedicated app support and maintenance services.",
       icon: "fa-solid fa-screwdriver-wrench",
     },
     {
@@ -64,51 +64,45 @@ export default function AppDevelopment() {
         }}
       >
         <Narrow>
-          <Row className="align-items-center">
-            {/* Left Side: Text Content with Breadcrumb */}
-            <Col md="6">
-              <nav aria-label="breadcrumb" className="mb-4">
-                <ol
-                  className="breadcrumb bg-transparent p-0"
-                  style={{ background: "none", marginBottom: 0 }}
-                >
-                  <li className="breadcrumb-item">
-                    <Link to="/" style={{ color: "#007bff" }}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className="breadcrumb-item">
-                    <Link to="/service" style={{ color: "#007bff" }}>
-                      service
-                    </Link>
-                  </li>
-                  <li
-                    className="breadcrumb-item active"
-                    aria-current="page"
-                    style={{ color: "#1a237e" }}
-                  >
-                    App Development
-                  </li>
-                </ol>
-              </nav>
-              <p
-                style={{
-                  color: "#a0aec0",
-                  fontSize: "14px",
-                  letterSpacing: "1px",
-                }}
+          {/* Breadcrumb positioned at top-left */}
+          <nav aria-label="breadcrumb" className="mb-4">
+            <ol
+              className="breadcrumb bg-transparent p-0 "
+              style={{ background: "none", marginBottom: 0 }}
+            >
+              <li className="breadcrumb-item home1para">
+                <Link to="/" style={{ color: "#007bff" }}>
+                  HOME
+                </Link>
+              </li>
+              <li className="breadcrumb-item home1para">
+                <Link to="/service" style={{ color: "#007bff" }}>
+                  SERVICE
+                </Link>
+              </li>
+              <li
+                className="breadcrumb-item active home1para"
+                aria-current="page"
+                style={{ color: "#1a237e" }}
               >
-                CASE STUDY
-              </p>
+                APP DEVELOPMENT
+              </li>
+            </ol>
+          </nav>
+
+          <Row className="align-items-center">
+            {/* Left Side: Text Content */}
+            <Col md="6">
               <h2
                 style={{
-                  fontSize: "42px",
+                  fontSize: "58px",
                   fontWeight: "bold",
                   lineHeight: "1.2",
-                  color: "#1a237e",
+                  color: "black",
                 }}
               >
-                App Development Services <br /> Tailored for Impact
+                App Development
+                <br /> Services Tailored for Impact
               </h2>
               <p
                 className="mt-4"
@@ -119,18 +113,7 @@ export default function AppDevelopment() {
                 deployment – we build for performance and growth.
               </p>
               <Link to="/contactus">
-                <Button
-                  color="primary"
-                  style={{
-                    marginTop: "2rem",
-                    backgroundColor: "#007bff",
-                    border: "none",
-                    padding: "10px 24px",
-                    fontSize: "16px",
-                    fontWeight: "500",
-                    borderRadius: "8px",
-                  }}
-                >
+                <Button className="book-appointment-btn">
                   Book an Appointment
                 </Button>
               </Link>
@@ -165,14 +148,11 @@ export default function AppDevelopment() {
           <Narrow>
             <h2
               className="text-4xl font-bold text-center mb-12"
-              style={{ color: "#1a237e" }}
+              style={{ color: "black" }}
             >
               Our Range of Android App Development Services
             </h2>
-            <p
-              className="text-center mb-16 text-lg"
-              style={{ color: "#1a237e" }}
-            >
+            <p className="text-center mb-16 text-lg" style={{ color: "black" }}>
               We offer Android app developments across various platforms. Have
               something unique in mind? Let's get started!
             </p>
@@ -301,7 +281,7 @@ export default function AppDevelopment() {
                 Feel free to reach out for any inquiries or assistance.
               </h3>
               <Link to="/contactus">
-                <Button className="bookappoinmentnow">
+                <Button className="bookappoinmentnow ">
                   Book an appointment now
                 </Button>
               </Link>

@@ -17,7 +17,6 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -120,7 +119,7 @@ function Home() {
             <div className="flex w-1/3 max-xl:w-3/12 flex-col justify-between max-lg:w-full">
               <div>
                 <h6 className="ourmodeltext">OUR MODEL</h6>
-                <h1 className="howedotext">How we do</h1>
+                <h2 className="howedotext">How we do</h2>
                 <h5 className="savetimetext">
                   Save time and money with our powerful method.
                 </h5>
@@ -137,12 +136,14 @@ function Home() {
                 <Card className="card1 w-3/12  py-3 px-3 flex items-center justify-center max-md:w-9/12 ">
                   <div className="flex items-center justify-center w-full ">
                     <img
-                      src='https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-1.svg?updatedAt=1713440854392'
+                      src="https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-1.svg?updatedAt=1713440854392"
                       alt=""
                       className="w-4/12 p-2 rounded-xl bg-[#1351d81a]"
                     />
                     <div className="w-8/12 pl-2 max-md:w-8/12 max-md:pl-5">
-                      <h6 className="text-blue-600 font-semibold">Brainstorming</h6>
+                      <h6 className="text-blue-600 font-semibold">
+                        Brainstorming
+                      </h6>
                       <p>Ideas</p>
                     </div>
                   </div>
@@ -150,7 +151,7 @@ function Home() {
                 <Card className="card1 w-3/12  py-3 px-3 mx-24 flex items-center justify-center max-md:w-9/12  max-md:my-10">
                   <div className="flex items-center justify-center w-full">
                     <img
-                      src='https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-2%20(1).svg?updatedAt=1713441749519'
+                      src="https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-2%20(1).svg?updatedAt=1713441749519"
                       alt=""
                       className="w-4/12 p-2 rounded-xl bg-[#1351d81a]"
                     />
@@ -162,9 +163,8 @@ function Home() {
                 </Card>
                 <Card className="card4 w-3/12  py-3 px-3 flex items-center justify-center max-md:w-9/12 ">
                   <div className="flex items-center justify-center w-full">
-
                     <img
-                      src='https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-3.svg?updatedAt=1713440667501'
+                      src="https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-3.svg?updatedAt=1713440667501"
                       alt=""
                       className="w-4/12 p-2 rounded-xl bg-[#1351d81a]"
                     />
@@ -180,9 +180,8 @@ function Home() {
               <div className="flex my-10 max-md:flex-col items-center">
                 <Card className="card5 w-3/12 mx-32 max-xl:mx-28 max-lg:mx-32 py-3 px-3 flex items-center justify-center max-md:w-9/12  max-md:mx-0 max-md:mb-10">
                   <div className="flex items-center justify-center w-full ">
-
                     <img
-                      src='https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-4.svg?updatedAt=1713441484235'
+                      src="https://ik.imagekit.io/2q7cgnqzi/Panacee%20React%20/logo/hwd-icon-4.svg?updatedAt=1713441484235"
                       alt=""
                       className="w-4/12 p-2 rounded-xl bg-[#1351d81a]"
                     />
@@ -195,7 +194,6 @@ function Home() {
                 </Card>
                 <Card className="card6 w-3/12  py-3 px-3 flex items-center justify-center max-md:w-9/12 ">
                   <div className="flex items-center justify-center w-full">
-
                     <img
                       src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/hwd-icon-5.svg"
                       alt=""
@@ -208,7 +206,6 @@ function Home() {
                     </div>
                   </div>
                 </Card>
-
               </div>
 
               <div>
@@ -227,7 +224,7 @@ function Home() {
                   </div>
                 </Card>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </Narrow>
@@ -237,10 +234,10 @@ function Home() {
           <Row>
             <Col md="6" className="homaepara2">
               <p className="delinglogheading">WHAT WE’RE OFFERING</p>
-              <h1 className="delingheading">
+              <h2 className="delingheading">
                 Dealing in all professional <br />
                 IT services.
-              </h1>
+              </h2>
             </Col>
             <Col md="6">
               <h6 className="delingcontent">
@@ -326,7 +323,7 @@ function Home() {
           <div className="px-3 py-14 max-xl:pb-10 max-xl:pt-0 mb-28 max-xl:mt-0 max-xl:mb-0 flex max-xl:flex-col gap-5">
             <div className="w-1/3 max-xl:w-full" style={{ marginTop: "2vh" }}>
               <p className="home1para">CONSULTING EXCELLENCE</p>
-              <h1 className="delingheading">Best pathway to our clients.</h1>
+              <h2 className="delingheading">Best pathway to our clients.</h2>
               <p className="homepara3">
                 Our consulting process begins with a thorough assessment of your
                 current IT infrastructure, workflows, and pain points.
@@ -434,23 +431,18 @@ function Home() {
         </Narrow>
       </div>
 
-
-
       <Narrow>
-        <ReviewSlider/>
+        <ReviewSlider />
       </Narrow>
-
-
-
 
       <div className="py-24 max-xl:py-5 px-3 background">
         <Narrow>
           <Row>
             <Col md="4" className="mt-28 max-xl:mt-5">
               <p className="home1para">PROJECTS</p>
-              <h1 className="empowermentHeading">
+              <h2 className="empowermentHeading">
                 Showcase of our recognized work.
-              </h1>
+              </h2>
               <p className="homepara3">
                 Our collaborative approach ensures that we truly understand our
                 clients unique requirements and challenges.
@@ -568,9 +560,9 @@ function Home() {
               <Row>
                 <Col>
                   <h6 className="inhow">FEATURED PRODUCT</h6>
-                  <h1 className="fetureproducthead">
+                  <h2 className="fetureproducthead">
                     Seamless productivity <br /> with our new app
-                  </h1>
+                  </h2>
                   <h4 className="fetureproductabout mt-3">
                     Download Slack and experience a new era of organization{" "}
                     <br /> and accomplishment.
@@ -600,9 +592,11 @@ function Home() {
               </div>
 
               <div className="productivitybutton">
-              <div>
+                <div>
                   <Link to="/contactus">
-                    <Button className="productivitybtn">Get Started Now!</Button>
+                    <Button className="productivitybtn">
+                      Get Started Now!
+                    </Button>
                   </Link>
                 </div>
                 <div>
@@ -618,7 +612,7 @@ function Home() {
 
       <div className=" mt-28 max-xl:mt-0">
         <Narrow>
-          <Slider/>
+          <Slider />
         </Narrow>
       </div>
 

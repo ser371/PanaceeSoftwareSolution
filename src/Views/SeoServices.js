@@ -35,120 +35,136 @@ export default function SeoServices() {
 
         <article>
           <Narrow>
-            <section className="py-24 bg-white text-gray-800">
+            <section className="py-24 bg-gray-50 text-gray-800">
               {/* Introduction */}
-              <div className="max-w-5xl mx-auto text-center mb-20">
-                <h2 className="text-5xl font-bold mb-6">
-                  SEO Services That Deliver Results
-                </h2>
-                <p className="text-lg leading-relaxed text-gray-600">
-                  At Panacee Infosolutions, we understand that a robust online
-                  presence is essential for any business looking to thrive in
-                  today's digital landscape. Our dedicated SEO team leverages
-                  the latest strategies and tools to improve your website's
-                  visibility, drive organic traffic, and boost your search
-                  engine rankings.
-                </p>
-                <img
-                  src={img}
-                  alt="SEO at Panacee"
-                  className="rounded-2xl shadow-xl mt-12 w-full max-w-4xl mx-auto"
-                />
+              <div className="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                  <h2 className="text-5xl font-bold leading-tight text-gray-900 mb-6">
+                    SEO Services That Deliver Results
+                  </h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    At{" "}
+                    <span className="font-semibold text-blue-700">
+                      Panacee Infosolutions
+                    </span>
+                    , we understand the importance of a strong digital presence.
+                    Our expert SEO team leverages advanced strategies and tools
+                    to enhance visibility, attract qualified traffic, and
+                    improve your search rankings sustainably.
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <img
+                    src={img}
+                    alt="SEO at Panacee"
+                    className="rounded-2xl shadow-xl max-w-full md:max-w-md transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
 
               {/* Why Choose Our SEO Services */}
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-16">
+              <div className="max-w-7xl mx-auto px-4 md:px-8 mt-28">
+                <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
                   Why Choose Our SEO Services?
                 </h2>
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                   {[
                     {
                       title: "Comprehensive SEO Audits",
                       desc: "We identify technical issues, content gaps, and on-page opportunities with detailed reports.",
                     },
                     {
-                      title: "Keyword Research and Strategy",
-                      desc: "Focused research on impactful keywords aligned with your audience’s intent and buying journey.",
+                      title: "Keyword Research & Strategy",
+                      desc: "We target high-intent keywords based on your audience’s behavior and competitive landscape.",
                     },
                     {
                       title: "On-Page Optimization",
-                      desc: "Optimize content, tags, and structure for better search visibility and usability.",
+                      desc: "Enhance your website’s relevance and usability with content and structural improvements.",
                     },
                     {
                       title: "Technical SEO",
-                      desc: "Resolve technical issues, improve site speed, and enhance mobile responsiveness.",
+                      desc: "Improve performance with mobile-friendly, fast-loading, and crawlable site architecture.",
                     },
                     {
-                      title: "Content Creation and Optimization",
-                      desc: "Create relevant and valuable content that speaks to both search engines and users.",
+                      title: "Content Creation & Optimization",
+                      desc: "Develop compelling content that ranks and resonates with users.",
                     },
                     {
                       title: "Link Building",
-                      desc: "Gain high-quality backlinks from reputable domains to improve domain authority.",
+                      desc: "Acquire quality backlinks to increase domain authority and trust.",
                     },
                     {
                       title: "Local SEO",
-                      desc: "Boost visibility for location-based searches and enhance your Google My Business profile.",
+                      desc: "Target geo-specific searches and optimize your Google Business profile.",
                     },
                     {
-                      title: "Analytics and Reporting",
-                      desc: "Transparent and insightful reporting with actionable recommendations.",
+                      title: "Analytics & Reporting",
+                      desc: "Actionable insights and performance tracking delivered with transparency.",
                     },
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="bg-gray-50 p-6 rounded-xl shadow-md transition hover:shadow-lg"
+                      className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 border border-gray-100"
                     >
-                      <h3 className="text-xl font-semibold mb-2">
+                      <h3 className="text-xl font-semibold mb-2 text-gray-800">
                         {item.title}
                       </h3>
-                      <p className="text-gray-700">{item.desc}</p>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Our SEO Process */}
-              <div className="max-w-6xl mx-auto mt-28">
-                <h2 className="text-4xl font-bold text-center mb-16">
+              <div className="max-w-6xl mx-auto px-4 md:px-8 mt-32">
+                <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
                   Our SEO Process
                 </h2>
-                <div className="space-y-12">
+                <div className="space-y-10">
                   {[
                     {
-                      title: "Discovery and Analysis",
-                      desc: "Understand your brand and current SEO status through competitor analysis and goal setting.",
+                      title: "Discovery & Analysis",
+                      desc: "Gain a deep understanding of your business, industry, and competitors to set clear objectives.",
                     },
                     {
-                      title: "Strategy Development",
-                      desc: "Tailor a roadmap of SEO actions with short- and long-term targets.",
+                      title: "Strategic Planning",
+                      desc: "Craft a tailored roadmap with measurable milestones, balancing quick wins and long-term growth.",
                     },
                     {
-                      title: "Implementation",
-                      desc: "Our SEO experts get to work, aligning your website’s elements with the crafted strategy.",
+                      title: "Execution",
+                      desc: "Implement technical, on-page, and content strategies with precision and expertise.",
                     },
                     {
-                      title: "Monitoring and Optimization",
-                      desc: "Ongoing optimization to maintain and improve results.",
+                      title: "Continuous Optimization",
+                      desc: "Refine campaigns with ongoing monitoring, A/B testing, and data-backed adjustments.",
                     },
                     {
-                      title: "Reporting and Communication",
-                      desc: "Detailed, easy-to-understand performance reports shared regularly.",
+                      title: "Transparent Reporting",
+                      desc: "Receive detailed, digestible reports and regular strategic reviews.",
                     },
                     {
-                      title: "Launch and Support",
-                      desc: "Continue refining post-launch and provide support for long-term success.",
+                      title: "Sustained Growth Support",
+                      desc: "Beyond implementation, we partner with you to ensure continuous performance.",
                     },
-                  ].map((item, index) => (
+                  ].map((step, index) => (
                     <div
                       key={index}
-                      className="border-l-4 border-blue-600 pl-6"
+                      className="flex items-start gap-6 bg-white border border-gray-100 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6"
                     >
-                      <h3 className="text-2xl font-semibold mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-700 text-lg">{item.desc}</p>
+                      {/* Step Number Circle */}
+                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white flex items-center justify-center text-lg font-bold shadow-md">
+                        {index + 1}
+                      </div>
+
+                      {/* Step Content */}
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {step.desc}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

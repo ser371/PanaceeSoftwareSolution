@@ -70,13 +70,15 @@ function Getintouch() {
       <Narrow>
         <div className="getintouch">
           <Row>
-            <Col md="6" className="getintouch1 p-20 max-xl:p-10">
+            <Col md="5" className="getintouch1 p-20 max-xl:p-10 h-full">
               <p style={{ color: "#1351d8", letterSpacing: "5px" }}>CONTACT</p>
               <h1 className="text-4xl font-bold">Lets get in touch</h1>
               <h5 style={{ marginTop: "30px" }}>
-                You can reach us anytime via
-                <a style={{ color: "blue" }} href="/">
-                  {" "}
+                You can reach us anytime via{" "}
+                <a
+                  style={{ color: "blue" }}
+                  href="mailto:info@panaceesoftwaresolutions.com"
+                >
                   info@panaceesoftwaresolutions.com
                 </a>
               </h5>
@@ -207,8 +209,8 @@ function Getintouch() {
               </div>
             </Col>
             <Col md="3">
-              <div className="exprience p-10 max-xl:p-0">
-                <Row className="expeince1con">
+              <div className="exprience p-10 ml-3 max-xl:p-10 h-full">
+                <Row className="expeince1con p-4 mt-3">
                   <div style={{ display: "flex" }}>
                     <span className="years22">5+</span>
                     <span style={{ marginTop: "15px", marginLeft: "10px" }}>
@@ -219,7 +221,7 @@ function Getintouch() {
                   <hr />
                 </Row>
 
-                <Row className="expeince1con">
+                <Row className="expeince1con p-4">
                   <div style={{ display: "flex" }}>
                     <span className="years22">100+</span>
                     <span style={{ marginTop: "15px", marginLeft: "10px" }}>
@@ -230,7 +232,7 @@ function Getintouch() {
                   <hr />
                 </Row>
 
-                <Row className="expeince1con">
+                <Row className="expeince1con p-4">
                   <div style={{ display: "flex" }}>
                     <span className="years22">99%</span>
                     <span
@@ -241,7 +243,7 @@ function Getintouch() {
                   <hr />
                 </Row>
 
-                <Row className="expeince1con">
+                <Row className="expeince1con p-4">
                   <div style={{ display: "flex" }}>
                     <span className="years22">2020</span>
                     <span style={{ marginTop: "15px", marginLeft: "10px" }}>
@@ -251,7 +253,10 @@ function Getintouch() {
                   <p className="inhow">Established On</p>
                   <hr />
                 </Row>
-                <Row className="expeince1con" style={{ borderBottom: "none" }}>
+                <Row
+                  className="expeince1con p-4"
+                  style={{ borderBottom: "none" }}
+                >
                   <div style={{ display: "flex" }}>
                     <span className="years22">2</span>
                     <span style={{ marginTop: "15px", marginLeft: "10px" }}>
@@ -262,7 +267,7 @@ function Getintouch() {
                 </Row>
               </div>
             </Col>
-            <Col md="3">
+            <Col md="4">
               <div className="contactcard p-20 max-xl:p-10">
                 <Row>
                   <Col
@@ -312,48 +317,103 @@ function Getintouch() {
                         marginTop: "39px",
                       }}
                     >
+                      {/* Whatsapp */}
                       <Col style={{ display: "flex", marginLeft: "2px" }}>
-                        <img
-                          src="https://www.svgrepo.com/show/77510/football.svg"
-                          alt=""
+                        <a
+                          href="https://wa.me/9650900190"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           style={{
-                            width: 20,
-                            height: 25,
-                            objectFit: "contain",
+                            display: "flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "inherit",
                           }}
-                        />
-                        <p style={{ marginLeft: "10px" }}>Dubblin</p>
+                        >
+                          <img
+                            src="https://www.svgrepo.com/show/521923/whatsapp.svg"
+                            alt="WhatsApp Icon"
+                            style={{
+                              width: 20,
+                              height: 25,
+                              objectFit: "contain",
+                            }}
+                          />
+                          <p style={{ marginLeft: "10px" }}>WhatsApp</p>
+                        </a>
                       </Col>
-                      <Row>
-                        <Col style={{ display: "flex" }}>
+
+                      {/* Twitter */}
+                      <Col style={{ display: "flex" }}>
+                        <a
+                          href="https://twitter.com/YOUR_TWITTER_HANDLE"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "inherit",
+                          }}
+                        >
                           <img
                             src="https://ik.imagekit.io/2q7cgnqzi/icon/twitter.svg?updatedAt=1711439397169"
-                            alt=""
+                            alt="Twitter"
                             style={{ width: 25, height: 25 }}
                           />
-                          <p style={{ marginLeft: "10px" }}>Twitter</p>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col style={{ display: "flex" }}>
+                          <p style={{ marginLeft: "10px", marginBottom: 0 }}>
+                            Twitter
+                          </p>
+                        </a>
+                      </Col>
+
+                      {/* Instagram */}
+                      <Col style={{ display: "flex" }}>
+                        <a
+                          href="https://www.instagram.com/panaceesoftwaresolutions"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "inherit",
+                          }}
+                        >
                           <img
                             src="https://ik.imagekit.io/2q7cgnqzi/icon/instagram.svg?updatedAt=1711439653309"
-                            alt=""
+                            alt="Instagram"
                             style={{ width: 25, height: 25 }}
                           />
-                          <p style={{ marginLeft: "10px" }}>Instagram</p>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col style={{ display: "flex" }}>
+                          <p style={{ marginLeft: "10px", marginBottom: 0 }}>
+                            Instagram
+                          </p>
+                        </a>
+                      </Col>
+
+                      {/* LinkedIn */}
+                      <Col style={{ display: "flex", marginLeft: "5px" }}>
+                        <a
+                          href="https://www.linkedin.com/company/panacee-software-solutions"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "inherit",
+                          }}
+                        >
                           <img
                             src="https://ik.imagekit.io/2q7cgnqzi/icon/linkedin.svg?updatedAt=1711439762894"
-                            alt=""
+                            alt="LinkedIn"
                             style={{ width: 18, height: 18 }}
                           />
-                          <p style={{ marginLeft: "10px" }}>Instagram</p>
-                        </Col>
-                      </Row>
+                          <p style={{ marginLeft: "12px", marginBottom: 0 }}>
+                            LinkedIn
+                          </p>
+                        </a>
+                      </Col>
                     </Row>
                   </Col>
                 </Row>

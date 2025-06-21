@@ -151,7 +151,7 @@ export default function Brainstorming() {
                   <div key={idx} className="flex items-center gap-4">
                     <img
                       src="https://ik.imagekit.io/2q7cgnqzi/icon/check.png?updatedAt=1711451555962"
-                      alt=""
+                      alt="Icons"
                       className="w-6 h-6"
                     />
                     <span>{text}</span>

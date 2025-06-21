@@ -62,61 +62,59 @@ function Contactus() {
       </Narrow>
 
       <Narrow>
-        <hr className="mb-10 mt-32" />
+        <hr className="mb-5 mt-10" />
       </Narrow>
 
-      <div className="mt-32 mb-10">
-        <Narrow>
-          <div className="map p-10">
-            <img
-              style={{ height: "500px" }}
-              className="mx-auto"
-              src="https://wpriverthemes.com/synck/wp-content/uploads/2023/12/map.svg"
-              alt=""
-            />
-          </div>
-        </Narrow>
-      </div>
+      <Narrow>
+        <Row className="mt-32 mb-32">
+          <Col md="6" className="p-4">
+            <div className="map h-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.639147490449!2d77.08972691107925!3d28.617846575571388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04ae129bffff%3A0x4f282fb7089d998c!2sPanacee%20Software%20Solutions!5e1!3m2!1sen!2sin!4v1750491945678!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "500px" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Panacee Software Solutions Location"
+              ></iframe>
+            </div>
+          </Col>
 
-      <div className="mb-32">
-        <Narrow>
-          <Row>
-            <Col md="6">
-              <Card className="contypecard">
-                <img
-                  src="https://ik.imagekit.io/2q7cgnqzi/Contact%20icon/icons8-support-50.png?updatedAt=1712128888299"
-                  alt=""
-                  style={{ height: "60px", width: "60px" }}
-                />
-                <h1 className="text-3xl font-bold">Support</h1>
-                <h5 className="text-xl">Contact our fast support team</h5>
-                <a href="">
-                  <h6 className=" text-blue-500 hover:text-blue-700 font-semibold text-lg">
-                    info@panaceesoftwaresolutions.com
-                  </h6>
-                </a>
-              </Card>
-            </Col>
+          <Col md="6" className="p-4 d-flex flex-column gap-4">
+            <Card className="contypecard p-4">
+              <img
+                src="https://ik.imagekit.io/2q7cgnqzi/Contact%20icon/icons8-support-50.png?updatedAt=1712128888299"
+                alt=""
+                style={{ height: "60px", width: "60px" }}
+              />
+              <h1 className="text-3xl font-bold">Support</h1>
+              <h5 className="text-xl">Contact our fast support team</h5>
+              <a href="mailto:info@panaceesoftwaresolutions.com">
+                <h6 className="text-blue-500 hover:text-blue-700 font-semibold text-lg">
+                  info@panaceesoftwaresolutions.com
+                </h6>
+              </a>
+            </Card>
 
-            <Col md="6">
-              <Card className="contypecard">
-                <img
-                  src="https://ik.imagekit.io/2q7cgnqzi/Contact%20icon/icons8-phone-50.png?updatedAt=1712129594658"
-                  alt=""
-                  style={{ height: "60px", width: "60px" }}
-                />
-                <h1 className="text-3xl font-bold">Phone</h1>
-                <h5 className="text-xl">Mon-Fri from 9am to 6pm.</h5>
-                <a href="">
-                  <h6 className="text-blue-500 hover:text-blue-700 font-semibold text-lg">
-                    9650900190
-                  </h6>
-                </a>
-              </Card>
-            </Col>
-          </Row>
-        </Narrow>
-      </div>
+            <Card className="contypecard p-4">
+              <img
+                src="https://ik.imagekit.io/2q7cgnqzi/Contact%20icon/icons8-phone-50.png?updatedAt=1712129594658"
+                alt=""
+                style={{ height: "60px", width: "60px" }}
+              />
+              <h1 className="text-3xl font-bold">Phone</h1>
+              <h5 className="text-xl">Mon-Fri from 9am to 6pm.</h5>
+              <a href="tel:9650900190">
+                <h6 className="text-blue-500 hover:text-blue-700 font-semibold text-lg">
+                  9650900190
+                </h6>
+              </a>
+            </Card>
+          </Col>
+        </Row>
+      </Narrow>
 
       <div className="mt-36">
         <Getintouch />
