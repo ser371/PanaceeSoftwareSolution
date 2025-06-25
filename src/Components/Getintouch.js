@@ -242,7 +242,6 @@ function Getintouch() {
                   <p className="inhow">Client Satisfaction </p>
                   <hr />
                 </Row>
-
                 <Row className="expeince1con p-4">
                   <div style={{ display: "flex" }}>
                     <span className="years22">2020</span>
@@ -284,9 +283,13 @@ function Getintouch() {
                       />
                     </Row>
                     <h4>Contact info</h4>
-                    <p style={{ marginBottom: "4px" }}>96509 00190</p>
+                    <p style={{ marginBottom: "2px", marginTop: "4px" }}>
+                      <a href="tel:+919650900190">96509 00190</a>
+                    </p>
                     <p style={{ margin: "0px" }}>
-                      info@panaceesoftwaresolutions.com
+                      <a href="mailto:info@panaceesoftwaresolutions.com">
+                        info@panaceesoftwaresolutions.com
+                      </a>
                     </p>
                     <br />
                     <Row style={{ marginTop: "30px" }}>
@@ -407,9 +410,15 @@ function Getintouch() {
                           <img
                             src="https://ik.imagekit.io/2q7cgnqzi/icon/linkedin.svg?updatedAt=1711439762894"
                             alt="LinkedIn"
-                            style={{ width: 18, height: 18 }}
+                            style={{
+                              width: 18,
+                              height: 18,
+                              marginBottom: "2px",
+                            }}
                           />
-                          <p style={{ marginLeft: "12px", marginBottom: 0 }}>
+                          <p
+                            style={{ marginLeft: "12px", marginBottom: "6px" }}
+                          >
                             LinkedIn
                           </p>
                         </a>

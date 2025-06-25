@@ -302,6 +302,16 @@ p {
   opacity: 0.9;
 }
 
+.about-us {
+  background-image: url("./Images/about-us.jpg"); /* Adjust path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 420px;
+
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
 .contypecard a {
   /* background-color: #000000; */
   color: #000000;
